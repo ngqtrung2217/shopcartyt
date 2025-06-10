@@ -90,7 +90,7 @@ const Shop = ({ categories, brands }: Props) => {
           </div>
         </div>
         <div className="flex flex-col md:flex-row gap-5 border-t border-t-shop_dark_green/50">
-          <div className="md:sticky md:top-20 md:self-start md:h-[calc(100vh-160px)] md:overflow-y-auto md:min-w-64 pb-5 md:border-r border-r-shop_btn_dark_green/50 scrollbar-hide">
+          <div className="pb-5 md:min-w-64 md:border-r border-r-shop_btn_dark_green/50">
             <CategoryList
               categories={categories}
               selectedCategory={selectedCategory}
@@ -107,7 +107,7 @@ const Shop = ({ categories, brands }: Props) => {
             />
           </div>
           <div className="flex-1 pt-5">
-            <div className="h-[calc(100vh-160px)] overflow-y-auto pr-2 scrollbar-hide">
+            <div className="pr-2">
               {loading ? (
                 <div className="p-20 flex flex-col gap-2 items-center justify-center bg-white">
                   <Loader2 className="w-10 h-10 text-shop_dark_green animate-spin" />
@@ -127,6 +127,7 @@ const Shop = ({ categories, brands }: Props) => {
             </div>
           </div>
         </div>
+        <div className="h-8 md:h-16" />
       </Container>
     </div>
   );
